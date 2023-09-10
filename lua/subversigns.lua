@@ -1,11 +1,12 @@
-local subversign = {}
+local subversigns = {}
 
-function subversign.setup()
+function subversigns.setup()
+    vim.api.nvim_create_augroup("subversigns")
     -- setup the onAttach function or something
     vim.api.nvim_create_autocmd({ 'BufRead' }, {
         group = 'subversigns',
         callback = function(_)
-            subversign.on_attach()
+            subversigns.on_attach()
         end
     })
 end
@@ -14,4 +15,4 @@ function on_attach()
     vim.notify("Hehehe boi!", vim.log.levels.INFO)
 end
 
-return subversign
+return subversigns
