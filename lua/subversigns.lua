@@ -10,7 +10,7 @@ function subversign.setup()
     })
 end
 
-function subversign.on_attach()
+function on_attach()
     vim.notify("Hehehe boi!", vim.log.levels.INFO)
 end
 
